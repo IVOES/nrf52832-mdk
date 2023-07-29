@@ -1,0 +1,65 @@
+examples/mbedos5/mbed-os-example-blinky/stats_report.h:32:5: warning: Member variable 'SystemReport::thread_count' is not initialized in the constructor. [uninitMemberVar]
+    SystemReport(uint32_t sample_rate) : max_thread_count(8), sample_time_ms(sample_rate)
+    ^
+examples/mbedos5/mbed-os-example-blinky/stats_report.h:34:9: warning: Class 'SystemReport' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor]
+        thread_stats = new mbed_stats_thread_t[max_thread_count];
+        ^
+examples/mbedos5/mbed-os-example-blinky/stats_report.h:34:9: warning: Class 'SystemReport' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq]
+        thread_stats = new mbed_stats_thread_t[max_thread_count];
+        ^
+examples/mbedos5/mbed-os-example-blinky/stats_report.h:32:5: style: Class 'SystemReport' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    SystemReport(uint32_t sample_rate) : max_thread_count(8), sample_time_ms(sample_rate)
+    ^
+examples/mbedos5/mbed-os-example-i2c-scanner/main.cpp:23:9: style: The scope of the variable 'rslt' can be reduced. [variableScope]
+    int rslt;
+        ^
+examples/mynewt/blinky/apps/blinky/src/main.c:69:12: error: Uninitialized variable: rc [uninitvar]
+    return rc;
+           ^
+examples/mynewt/blinky/apps/blinky/src/main.c:47:9: style: Variable 'rc' is not assigned a value. [unassignedVariable]
+    int rc;
+        ^
+examples/nrf5-sdk/ble_app_cli/cli_gpio_cmds.c:86:11: style: The scope of the variable 'level' can be reduced. [variableScope]
+ uint32_t level;
+          ^
+examples/nrf5-sdk/flash_fds/main.c:184:9: style:inconclusive: Boolean expression 'm_delete_all.delete_next' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+        & !m_delete_all.pending)
+        ^
+examples/nrf5-sdk/flash_fds/main.c:184:9: style: Boolean result is used in bitwise operation. Clarify expression with parentheses. [clarifyCondition]
+        & !m_delete_all.pending)
+        ^
+examples/zephyr/button/src/main.c:69:0: information: Skipping configuration 'SW0_GPIO_NAME;SW0_GPIO_PIN' since the value of 'SW0_GPIO_NAME' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ gpiob = device_get_binding(PORT);
+^
+examples/zephyr/button/src/main.c:75:0: information: Skipping configuration 'SW0_GPIO_NAME;SW0_GPIO_PIN' since the value of 'SW0_GPIO_PIN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ gpio_pin_configure(gpiob, PIN,
+^
+examples/zephyr/button/src/main.c:78:0: information: Skipping configuration 'SW0_GPIO_NAME;SW0_GPIO_PIN' since the value of 'SW0_GPIO_PIN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ gpio_init_callback(&gpio_cb, button_pressed, BIT(PIN));
+^
+examples/zephyr/button/src/main.c:81:0: information: Skipping configuration 'SW0_GPIO_NAME;SW0_GPIO_PIN' since the value of 'SW0_GPIO_PIN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ gpio_pin_enable_callback(gpiob, PIN);
+^
+examples/zephyr/button/src/main.c:86:0: information: Skipping configuration 'SW0_GPIO_NAME;SW0_GPIO_PIN' since the value of 'SW0_GPIO_PIN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  gpio_pin_read(gpiob, PIN, &val);
+^
+examples/nrf5-sdk/ble_app_beacon/main.c:135:0: style: The function 'assert_nrf_callback' is never used. [unusedFunction]
+
+^
+examples/zephyr/bluetooth/gatt/cts.c:98:0: style: The function 'cts_init' is never used. [unusedFunction]
+
+^
+examples/zephyr/bluetooth/gatt/cts.c:106:0: style: The function 'cts_notify' is never used. [unusedFunction]
+
+^
+examples/zephyr/bluetooth/gatt/hog.c:165:0: style: The function 'hog_init' is never used. [unusedFunction]
+
+^
+examples/zephyr/bluetooth/gatt/ipss.c:65:0: style: The function 'ipss_advertise' is never used. [unusedFunction]
+
+^
+examples/zephyr/bluetooth/gatt/ipss.c:58:0: style: The function 'ipss_init' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
